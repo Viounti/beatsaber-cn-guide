@@ -236,6 +236,8 @@
 			if (!canUseWebP())
 			{
 				document.getElementById("webpw").style.display="";
+				document.getElementById("cd-intro-background").style.background="url('assets/img/cd-intro-background.png') no-repeat center center";
+				document.getElementById("cd-intro-background").style.backgroundSize="cover";
 				for (i = 1; i <= tupianshuliang; i++) { 
 					console.log("img-"+ i);
 					document.getElementById("img-"+ i).src = document.getElementById("img-"+ i).src.replace(".webp", ".png"); 
