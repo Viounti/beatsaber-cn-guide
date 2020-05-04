@@ -21,6 +21,7 @@
 
 	<main class="cd-content">
 		<div class="cd-container">
+			<p style="text-align:center;background-color:red;color:white;display:none;" id="webpw">请升级您的浏览器以支持WebP格式图像！目前只有IE、Safari与iOS不支持，<br>将显示为PNG格式图像。由于PNG压缩效率较低，所以图像可能加载缓慢。</p>
 			<h1 style="text-align: center;">更好地了解Rank系统、计分和加成项等内容的指南</h1>
 			<!--p style="text-align: center;">一些地方可能读起来不通顺是由于站长是中学生，对于语言的造诣并没有那么高，已经尽力润色翻译后的语句了。</p-->
 			<p style="text-align: center;">由<a href="https://bsaber.com/members/teknozfr/" target="_blank">TeknozFR</a>编写，<a href="https://space.bilibili.com/17539027" target="_blank" title="Vio">Vio</a>翻译为中文。</p>
@@ -234,6 +235,7 @@
 		function cwebp(tupianshuliang) {
 			if (!canUseWebP())
 			{
+				document.getElementById("webpw").style.display="";
 				for (i = 1; i <= tupianshuliang; i++) { 
 					console.log("img-"+ i);
 					document.getElementById("img-"+ i).src = document.getElementById("img-"+ i).src.replace(".webp", ".png"); 
