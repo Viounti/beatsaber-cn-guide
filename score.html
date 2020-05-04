@@ -1,396 +1,220 @@
 <!doctype html>
-<html lang="zh">
+<html lang="zh" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
-  <title>Beat Saber打分指南</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="assets/css/style.css"> <!-- Resource style -->
+	<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+	<title>Beat Saber打分指南</title>
+	<meta name="robots" content="noindex, nofollow"> <!-- 禁止收录iframe内页（不影响主页及其他页面） -->
 </head>
 <body>
-<header class="cd-header flex flex-column flex-center">
-  <div class="text-component text-center">
-    <h1>关于Beat Saber的打分，加成选项和rank系统的指南（翻译中）</h1>
-  </div>
-</header>
 
-<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
-	<ul class="cd-faq__categories">
-		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#first">前言</a></li>
-		<li><a class="cd-faq__category truncate" href="#as">准度和得分</a></li>
-		<li><a class="cd-faq__category truncate" href="#account">关于rank和unrank</a></li>
-		<li><a class="cd-faq__category truncate" href="#pay">Payments</a></li>
-		<li><a class="cd-faq__category truncate" href="#privacy">Privacy</a></li>
-		<li><a class="cd-faq__category truncate" href="#delivery">Delivery</a></li>
-	</ul> <!-- cd-faq__categories -->
+	<section id="cd-intro">
+		<div id="cd-intro-background"></div>
+		<div id="cd-intro-tagline">
+			<h1>Beat Saber计分、加成项和Rank系统的指南</h1>
+		</div> <!-- cd-intro-tagline -->
+	</section> <!-- #cd-intro -->
 
-	<div class="cd-faq__items">
-		<ul id="first" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>前言</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>这个教程是谁写的？</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-			  <p>这个教程来源 <a href="https://bsaber.com/indepth-guide/?tdsourcetag=s_pctim_aiomsg#AccuracyandScoring" target="_blank" title="bs指南">https://bsaber.com/indepth-guide/?tdsourcetag=s_pctim_aiomsg#AccuracyandScoring</a> 由TeknozFR创作。我负责把它翻译成中文。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+	<main class="cd-content">
+		<div class="cd-container">
+			<h1 style="text-align: center;">更好地了解Rank系统、计分和加成项等内容的指南</h1>
+			<!--p style="text-align: center;">一些地方可能读起来不通顺是由于站长是中学生，对于语言的造诣并没有那么高，已经尽力润色翻译后的语句了。</p-->
+			<p style="text-align: center;">由<a href="https://bsaber.com/members/teknozfr/" target="_blank">TeknozFR</a>编写，Viounti翻译为中文。</p>
+			<p style="text-align: center;">非常感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的大量技术支持、<a href="https://scoresaber.com/u/76561198146815165" target="_blank" title="waika">waika</a>提供的部分翻译支持，以及<a href="https://steamcommunity.com/profiles/76561198199243262/" target="_blank" title="moran">漠然轻寒</a>提供的部分翻译支持以及翻译思路。</p>
+			<p style="text-align: center;">免责声明：这个指南于2019年2月17日制作（于2020年4月13日开始被翻译成中文），原作者会尽力保持其为最新，但仍然有某些信息不准确，甚至没有记录。本教程可以让大家更好的了解rank系统和游戏的其他方面（打分），但并不是这款游戏的完整教程，希望它对您有用。</p>
+			<!--h2 style="text-align: center;">内容导航</h2>
+			<p>1. 准度和计分</p>
+			<p>2. Rank过程</p>
+			<p>3. Rank系统（PP系统）</p>
+			<p>4. 加成项</p>
+			<p>5. 手柄握法</p>
+			<p>6. 一些提示和链接</p-->
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>为什么有一些地方读起来不通顺？</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>由于站长是中学生，对于语言的造诣并没有那么高，已经尽力润色翻译后的语句了。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h1 style="text-align: center;">准度和计分</h1>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>免责声明</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>这个指南于2019年2月17日制作（于2020年4月13日被翻译成中文），原作者会尽力保持其为最新，但仍然有某些信息不准确，甚至没有记录。本教程可以让大家更好的了解rank系统和游戏的其他方面（打分），但并不是这款游戏的完整教程，希望它对您有用。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>计分倍率<img src="assets/img/image-1.webp" width="16.146%" alt="分数乘数" style="float:right; margin: 10px;"></h3>
+			<p>
+				在游戏内，您可以在左侧看到您的分数乘数，它是一个被白色圆圈包裹（之后称之为外圈）的数字。<br>
+				顾名思义，分数乘数会影响您的分数。在您开始打这首歌的时候，分数乘数为 x1 ，而外圈则会显示到下一个乘数的进度。当您击打一个方块并且分数乘数增加的时候，该方块的得分会被乘上最新的乘数，而不是之前的乘数。<br>
+				分数乘数分别为：1x, 2x, 4x 和 8x。当您丢失连击时（包括丢失方块，击打方向错误，光剑使用错误，击打炸弹以及被墙覆盖），分数乘数将减半。
+			</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>BeatSaber常见问题解答</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>BeatSaber常见问题解答：<a href="https://bs-wgzeyu.gtxcn.com/" target="_blank" title="BeatSaber常见问题解答">https://bs-wgzeyu.gtxcn.com/</a> （由WGzeyu制作）</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-			
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>感谢人员</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>感谢:</p>
-			<p><a href="https://scoresaber.com/u/76561198174192501" target="_blank" title="WGzeyu">WGzeyu</a> 提供大量技术支持，以及部分图片的提供，十分感谢！</p>
-			<p><a href="https://scoresaber.com/u/76561198146815165" target="_blank" title="waika">waika</a> 提供部分翻译支持。</p>
-			<p><a href="https://steamcommunity.com/profiles/76561198199243262/" target="_blank" title="moran">漠然轻寒</a> 提供部分翻译支持以及翻译思路。</p>
-			<p><a href="https://scoresaber.com/u/76561198813747810" target="_blank" title="ani">ani</a> 提供的精神支持？（草</p>
-			<p><a href="https://github.com/Viounti/beatsaber-cn-guide" target="_blank" title="github">Github</a> 提供的代码以及网页托管。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>得分</h3>
+			<p>在Beat Saber里得分并不简单，它不但取决于高连击和不丢失方块，还取决于每个方块的得分。</p>
+			<p>
+				每个方块的最大击打分为 115 分（不乘分数乘数）。击打方块时，必须用正确的角度击打，并且必须将方块在中间一分为二，才能得到最佳分数，如下：
+				<div align="center">
+					<table border="2">
+						<!--tr> 
+							<th>挥剑角度</th>
+							<th>得分</th>
+						</tr-->
+						<tr>
+							<td>击打前挥100°</td>
+							<td>70分</td>
+						</tr>
+						<tr>
+							<td>击打后挥60°</td>
+							<td>30分</td>
+						</tr>
+						<tr>
+							<td>方块碎片两半一样大&nbsp;&nbsp;&nbsp;</td>
+							<td>15分</td>
+						</tr>
+					</table>
+				</div>
+			</p>
+			<p>这表明了使用正确的角度挥剑的重要性，因为这样您才能获得更高的分数。但请记住，击打不完美（bad cut）永远比丢掉方块好，因为丢失方块会被记为0分，断掉连击以及扣血。</p>
 
-		</ul> <!-- cd-faq__group -->
-
-		
-		
-		
-		<ul id="as" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>准度和得分</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>分数乘数/倍率</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>在游戏内，您可以在左侧看到您的分数乘数，它是一个被白色圆圈包裹（之后称之为外圈）的数字。<img src="assets/img/image-1.webp" alt="分数乘数"></p>
-			<p>顾名思义，分数乘数会影响您的分数。在您开始打这首歌的时候，分数乘数为 x1 ，而外圈则会显示到下一个乘数的进度。当您击打一个方块并且分数乘数增加的时候，该方块的得分会被乘上最新的乘数，而不是之前的乘数。</p>
-			<p>分数乘数分别为：1x, 2x, 4x 和 8x。当您丢失连击时（包括丢失方块，击打方向错误，光剑使用错误，击打炸弹以及被墙覆盖），分数乘数将减半。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>得分</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>在Beat Saber里得分并不简单，它不但取决于高连击和不丢失方块，还取决于每个方块的得分。</p>
-			<p>每个方块的最大击打分为 115 分（不乘分数乘数）。击打方块时，必须用正确的角度击打，并且必须将方块在中间一分为二，才能得到最佳分数，如下：</p>
-			  <br>
-			  <div align="center">
-				  <table border="2" >
-				  <tr> 
-					  <th>挥剑角度</th>
-					  <th>得分</th>
-				  </tr>
-				  <tr>
-					  <td>100°（击打之前）</td>
-					  <td>70分</td>
-				  </tr>
-				  <tr>
-					  <td>60°（击打之后）</td>
-					  <td>30分</td>
-				  </tr>
-				  <tr>
-					  <td>将方块一分为二</td>
-					  <td>15分</td>
-				  </tr>
-			  </table>
-			  </div>
-			  <br>
-			  <br>
-			  <p>这表明了使用正确的角度挥剑的重要性，因为这样您才能获得更高的分数。但请记住，击打不完美（bad cut）永远比丢掉方块好，因为丢失方块会被记为0分，断掉连击以及扣血。</p>
-          </div>
-		  
-				</div> <!-- cd-faq__content -->
-			</li>
-
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>判定/击打范围（hitboxes）</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>在Beat Saber中，大多数人认为方块本身就是判定范围，这是一个很常见的误解。尽管在之前是这样的，但是随着游戏更新，判定范围更改了不少次，这是当前版本的判定范围：<img src="assets/img/image-2.webp" alt="判定范围1.9"></p>
+			<h3>判定范围（hitboxes）<img src="assets/img/image-2.webp" width="40.885%" alt="判定范围1.9" style="float:right; margin: 10px;"></h3>
+			<p>在Beat Saber中，大多数人认为方块本身就是判定范围，这是一个很常见的误解。尽管在之前是这样的，但是随着游戏更新，判定范围更改了不少次，图中是当前版本的判定范围。</p>
 			<p>如图，当前版本的判定范围在前方和边缘都加大了，所以这里建议您使用剑尖来击打，以便获得完美击打（best cut）。</p>
-			  <br>
-					</i>据说在将来的版本中会添加“Pro Modifier”,	它可以判定范围变为方块本身。</i>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-	
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>准度</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
+			<p><i>据说在将来的版本中会添加“Pro Modifier”,	它可以判定范围变为方块本身。</i></p>
+
+			<h3>准度</h3>
 			<p>准确度可以这么理解：您目前的得分相对于满分的占比。</p>
-            <p>准确度可以在选歌页面的 Player Settings->Advanced HUD 开启，开启后准确度显示会在左侧，它以百分数和字母表示，它可以很好的反应您得分的能力。</p>
-			<p>准确度通过命中方块，分数乘数，还有丢失方块来计算。下图列举了准确度和字母的关系：</p>
-			<br>
-			<img src="assets/img/score.webp">
-			  
-			<div align="center">
-			  <p>感谢<a href="https://scoresaber.com/u/76561198174192501" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
-			</div>
-			<br>
-			<p>如上图，数字对应的是百分数（%），数字下方是对应的字母。举个例子：如果您一首曲子打了85%，那么您对应字母的就是 S 。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-		</ul> <!-- cd-faq__group -->
+			<p>准确度可以在选歌页面的 Player Settings->Advanced HUD 开启，开启后准确度显示会在左侧，它以百分数和字母表示，它可以很好的反应您得分的能力。</p>
+			<p>准确度通过命中方块，分数乘数，还有丢失方块来计算。<br>下图列举了准确度和字母的关系：</p>
+			<p align="center"><img width="100%" src="assets/img/score.webp"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
+			<p>如上图，数字对应的是百分数（%），数字下方是对应的字母。<br>举个例子：如果您一首曲子打了85%，那么您对应字母的就是 S 。</p>
 
-		<ul id="account" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>关于rank和unrank</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Ranked / Unranked</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>大多数人刚开始会花不少时间来了解ranked和unranked的区别,虽然谱子被rank并不会让它变得更好；但是这对于要进行排名的新玩家来说很重要。</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h1 style="text-align: center;">Rank过程<!--Rank与Unrank--></h1>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Ranked谱子</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Rank后的谱子会有一个难度等级（也被称为真实难度），这个等级用星号（⭐）来表示（详情见下方的 难度 项）。</p>
-			<br>
+			<h3>Rank与Unrank</h3>
+			<p>大多数人刚开始会花不少时间来了解ranked和unranked的区别,虽然谱子被rank并不会让它变得更好；但是这对于要进行排名的新玩家来说很重要。</p>
+
+			<h3>Ranked铺面</h3>
+			<p>Rank后的谱子会有一个难度等级（也被称为真实难度），这个等级用星号（⭐）来表示（详情见下方的 难度 项）。</p>
 			<p>每个等级都有对应数量的pp点（Performance Points）；玩家可以通过完成被rank的谱子来获得pp，而准确度越高，获得的pp越多。</p>
 			<p>Rank后的谱子大多数都是良好的谱子，不会出现塞爆，同向方块，以及其他难以击打的情况；注意：想在排行榜上升排名只有去打Rank的谱子才行。</p>
-			<i>对此有疑问如：pp是什么？rank组是什么？ 请接着往下看，下面详细讲述了这些问题。</i>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<p><i>对此有疑问如：pp是什么？rank组是什么？ 请继续看，下面详细讲述了这些问题。</i></p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Unranked谱子</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>所有人都可以使用 Mediocre Mapper（MM）这类谱面编辑器来做谱并且上传至Beatsaver，但是上传至Beatsaver并不需要审核，所以谱面的质量参差不齐。</p>
+			<h3>Unranked铺面</h3>
+			<p>所有人都可以使用 Mediocre Mapper（MM）这类谱面编辑器来做谱并且上传至Beatsaver，但是上传至Beatsaver并不需要审核，所以谱面的质量参差不齐。</p>
 			<p>而Uranked的谱子就是在Beatsaver发布并且没有经过 rank组 审核的谱子。</p>
 			<p>这类谱子并没有标注难度等级 ⭐，也就是说您并不知道它的真实难度（不知道它适不适合您）；也不知道具体谱面质量如何（总体质量可以通过观察点赞数和点踩数知晓）</p>
-			<br>
-			<i>请注意：谱面内的难度（例如Expert）并不代表真实难度，因为它是作者自定义的难度；</i>
-			<br>
-			<i>举个例子：在Beatsaver下载的谱子，可能会出现hard比expert+难的情况。</i>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<p><i>请注意：谱面内的难度（例如Expert）并不代表真实难度，因为它是作者自定义的难度；</i><br><i>举个例子：在Beatsaver下载的谱子，可能会出现hard比expert+难的情况。</i></p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>谱面是怎么被rank的</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>有了Score Saber这个排名插件之后，需要许多高质量/可排名性强的谱面以便进行排名，于是就在discord成立了一个谱面审核小组（rank team 之后称为 审核小组）。</p>
+			<h3>铺面Rank过程</h3>
+			<p>有了Score Saber这个排名插件之后，需要许多高质量/可排名性强的谱面以便进行排名，于是就在discord成立了一个谱面审核小组（rank team 之后称为 审核小组）。</p>
 			<p>审核小组创建了 审核标准 ，所以并不是所有的谱面都能被rank。ranked的谱面必须符合审核标准；如果审核标准更新后，该谱面不符合审核标准，将会被取消ranked（unrank）。</p>
 			<p>那么这些谱子是怎么被排名的呢？十分简单：谱师将制作好的谱子提交到discord的审核频道，审核人员（rankers）将会初审该谱子，如果有问题则告诉谱师需要修改的地方。</p>
 			<p>如果没有问题则会通过初审，之后由整个审核小组投票，如过没有反对票，则通过审核，投放到qualified队列，由玩家测试；若玩家没有意见则会正式发布，若玩家有意见则会重新审核后通知谱师修改。</p>
-			<p>如果投票的时候出现了反对票，审核小组将通知谱师修改后重新审核。</p>
-			<br>
 			<p>审核小组通常会花费大量的个人时间来完成审核，但他们常常无缘无故地受到批评；所以请对他们表示感谢，以及...给他们一些爱♥</p>
-          </div>
-					
-		  </div> <!-- cd-faq__content -->
-				
-			</li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>难度</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
+
+			<h3>难度</h3>
             <p>上文提到了难度是由作者自定义的，也就是说您看到的expert+或者hard都不是该谱面真实难度，而是针对于这个谱面的难度（我个人称它为 虚假难度）；所以您下载unranked的谱子的时候，可能会出现easy难度比expert+还难的情况。</p>
-			<p>这时就需要一个真实难度来给ranked谱子标注难度，真实难度用⭐表示，如下图：<img src="assets/img/rank-1.webp" title="真实难度"></p>
-			<p>值得注意的是，unranked的谱子并没有真实难度（有例外，在下方做出了解释），如图：<img src="assets/img/unrank-2.webp"><img src="assets/img/unrank-1.webp"></p>
+			<p>这时就需要一个真实难度来给ranked谱子标注难度，真实难度用⭐表示，如下图：<br><img width="61.459%" src="assets/img/rank-1.webp" title="真实难度"></p>
+			<p>值得注意的是，unranked的谱子并没有真实难度（有例外，在下方做出了解释），如图：<br><img width="61.459%" src="assets/img/unrank-2.webp"><br><img width="61.459%" src="assets/img/unrank-1.webp"></p>
 			<p>所以，如果你的技术还不够好，笔者这里建议您去打一些真实难度比较低的谱子。</p>
-			<i>如果一首谱子被rank后又被unrank了，那么这首谱子也会保留星级；因为星级是rank组制定的（不准确）</i>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-		</ul> <!-- cd-faq__group -->
+			<p><i>如果一首谱子被rank后又被unrank了，那么这首谱子也会保留星级；因为星级是rank组制定的（不准确）</i></p>
 
-		<ul id="pay" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>Payments</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Can I have an invoice for my subscription?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h1 style="text-align: center;">Rank系统（PP系统）</h1>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Why did my credit card or PayPal payment fail?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusantium dolorem vel, ad, nostrum natus eos, nemo placeat quos nisi architecto rem dolorum amet consectetur molestiae reprehenderit cum harum commodi beatae necessitatibus. Mollitia a nostrum enim earum minima doloribus illum autem, provident vero et, aspernatur quae sunt illo dolorem. Corporis blanditiis, unde, neque, adipisci debitis quas ullam accusantium repudiandae eum nostrum quis! Velit esse harum qui, modi ratione debitis alias laboriosam minus eaque, quod, itaque labore illo totam aut quia fuga nemo. Perferendis ipsa laborum atque assumenda tempore aspernatur a eos harum non id commodi excepturi quaerat ullam, explicabo, incidunt ipsam, accusantium quo magni ut! Ratione, magnam. Delectus nesciunt impedit praesentium sed, aliquam architecto dolores quae, distinctio consectetur obcaecati esse, consequuntur vel sit quis blanditiis possimus dolorum. Eaque architecto doloremque aliquid quae cumque, vitae perferendis enim, iure fugiat, soluta aut!</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Why does my bank statement show multiple charges for one upgrade?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-		</ul> <!-- cd-faq__group -->
+			<h3>我应该如何获得PP分，排名系统如何运作？</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-		<ul id="privacy" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>Privacy</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Can I specify my own private key?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>PP系统如何工作，什么是加权PP？</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>My files are missing! How do I get them back?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>为什么我的总PP不如我在新分数中获得的加权PP那样快？</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How can I access my account data?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus magni vero deserunt enim et quia in aliquam, rem tempore voluptas illo nisi veritatis quas quod placeat ipsa! Error qui harum accusamus incidunt at libero ipsum, suscipit dolorum esse explicabo in eius voluptates quidem voluptatem inventore amet eaque deserunt veniam dignissimos excepturi? Dolore, quo amet nostrum autem nemo. Sit nam assumenda, corporis ea sunt distinctio nostrum doloribus alias, beatae nesciunt dolore saepe consequuntur minima eveniet porro dolor officiis maiores ab obcaecati officia enim aliquam. Itaque fuga molestiae hic accusantium atque corporis quia id sequi enim vero? Hic aperiam sint facilis aliquam quia, accusamus tenetur earum totam enim est, error. Iusto, reiciendis necessitatibus molestias. Voluptatibus eos explicabo repellat nesciunt nam vero minima.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>如何改善并获得更多PP？</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How can I control if other search engines can link to my profile?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-		</ul> <!-- cd-faq__group -->
+			<h1 style="text-align: center;">加成项</h1>
 
-		<ul id="delivery" class="cd-faq__group">
-			<li class="cd-faq__title"><h2>Delivery</h2></li>
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>What should I do if my order hasn't been delivered yet?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>加成项和Ranked歌曲</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How can I find your international delivery information?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>No Fail (-0.50)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Who takes care of shipping?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>No Obstacles (-0.05)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How do returns or refunds work?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>No Bombs (-0.10)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How do I use shipping profiles?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>Slower Song (-0.30)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How does your UK Next Day Delivery service work?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>Insta Fail (0.00)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>How does your Next Day Delivery service work?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>Battery Energy (0.00)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>When will my order arrive?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
+			<h3>Disappearing Arrows (+0.07)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>When will my order ship?</span></a>
-				<div class="cd-faq__content">
-          <div class="text-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-          </div>
-				</div> <!-- cd-faq__content -->
-			</li>
-		</ul> <!-- cd-faq__group -->
-	</div> <!-- cd-faq__items -->
+			<h3>Faster Song (+0.08)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
 
-	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
-  
-  <div class="cd-faq__overlay" aria-hidden="true"></div>
-</section> <!-- cd-faq -->
-<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-<script src="assets/js/main.js"></script>
-<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278810287'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278810287%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+			<h3>Ghost Notes (+0.11)</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h1 style="text-align: center;">手柄握法</h1>
+
+			<h3>为什么要更换握法？</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>HTC Vive：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>Oculus Rift CV1：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>Oculus Rift S：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>Windows Mixed Reality：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>Valve Index：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h1 style="text-align: center;">一些提示和链接</h1>
+
+			<h3>提示与技巧 ：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>挑战自己</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>不要只刷排名</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>记录自己的演奏</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>观看更好的玩家比赛并向他们提问</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>不要想太多</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>练习硬模式</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>玩得开心</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+			<h3>友情链接：</h3>
+			<p>此页仍在翻译施工中，完整内容请先<a href="https://bsaber.com/indepth-guide/" target="_blank">查看原文</a>或过段时间再来看。</p>
+
+		</div>
+	</main> <!-- cd-content -->
+
+	<script src="https://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script> <!-- Resource jQuery -->
+	<script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278810287'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278810287%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>
