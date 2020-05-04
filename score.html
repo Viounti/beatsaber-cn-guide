@@ -236,14 +236,9 @@
 			{
 				for (i = 1; i <= tupianshuliang; i++) { 
 					console.log("img-"+ i);
-					csrc("img-"+ i, ".webp", ".png");
+					document.getElementById("img-"+ i).src = document.getElementById("img-"+ i).src.replace(".webp", ".png"); 
 				}
 			}
-		}
-
-		function csrc(mbid, yuanneirong, mubiaoneirong) {
-			document.getElementById(mbid).src = document.getElementById(mbid).src.replace(yuanneirong, mubiaoneirong); 
-
 		}
 
 		function canUseWebP() {
