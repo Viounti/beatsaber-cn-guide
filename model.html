@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'-->
+    <script src="assets/js/modernizr.js"></script>
+    <!-- Modernizr -->
+    <title>Beat Saber打分指南</title>
+    <script>
+      if (window.location !== window.parent.location) {
+        document.write('<link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/base-part-1.css">');
+      } else {
+        document.write('<link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/style.css">');
+      }
+    </script>
+    <noscript>
+      <link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/base-part-1.css">
+    </noscript>
+    <script>
+      if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        document.write('<link rel="stylesheet" href="assets/header/css/flexi-header.css?v=8">');
+      } else {
+        document.write('<link rel="stylesheet" href="assets/header/css/flexi-header-ie.css">');
+      }
+    </script>
+    <noscript>
+      <link rel="stylesheet" href="assets/header/css/flexi-header.css?v=8">
+    </noscript>
+    <script>
+      if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+        document.write('<link rel="stylesheet" href="assets/header/css/modal-window.css?v=8">');
+      } else {
+        document.write('<link rel="stylesheet" href="assets/header/css/modal-window-ie.css">');
+      }
+    </script>
+    <noscript>
+      <link rel="stylesheet" href="assets/header/css/modal-window.css?v=8">
+    </noscript>
+    <link rel="stylesheet" href="assets/css/reset.css?v=2">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <!-- Resource style -->
+    <style>
+	  .nav{ /*固定导航栏*/ 
+	    position:fixed; 
+	    top:0; left:0; 
+	    width:100%; 
+	    height:70px; 
+	    z-index:8; 
+	  } 
+	  @media screen and (max-width: 1024px) { 
+	    .nav{
+	      height:50px;
+	    }
+	  }
+	#cd-intro #cd-intro-background {
+		height: 100%;
+		width: 100%;
+		background: url("assets/img/score/cd-intro-background.webp") no-repeat center center;
+		background-size: cover;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	}
+	</style>
+  </head>
+
+  <body onload="cwebp(150);">
+  <!--图片数量发生变更时请记得将新图片加上id为img-x，然后修改这里的图片数量。更新：多写些似乎也没啥事，先写个150，应该暂时不用改了-->
+
+    <div style="background:#FFF" class="nav">
+      <header class="x-nsp js-f-header x-ve">
+        <div class="x-nsd x-t x-a">
+          <a href="#0" class="x-nsv">
+            <img width="100%" src="assets/header/img/viounti.png">
+          </a>
+          <button class="reset x-nss js-anim-menu-btn x-nsm js-tab-focus" aria-label="Toggle menu">
+            <i class="x-nso x-nsu" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="x-nsg" role="navigation">
+          <div class="x-noe x-tus x-t x-a">
+            <div class="x-nsb flex-grow x-iv">
+              <a href="#0" class="x-nsv">
+                <img width="100%" src="assets/header/img/viounti.png">
+              </a>
+            </div>
+            <ul class="x-not flex-grow x-iv x-tui">
+              <li class="x-nsw">
+                <a href="https://bs-wgzeyu.gtxcn.com/" class="x-nsk">BS常见问题解答</a>
+              </li>
+              <li class="x-nsw">
+                <a href="http://bs.zhm233.top/?1" class="x-nsk">
+                  <span>BS游戏资源共享</span>
+                  <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
+                    <path d="M6,9l4-5H2Z"></path>
+                  </svg>
+                </a>
+                <ul class="x-nsz">
+                  <li>
+                    <a href="http://bs.zhm233.top/?1" class="x-ns_">主站 | 张慧明的NAS</a>
+                  </li>
+                  <li>
+                    <a href="http://bd.zhm233.top/" target="_blank" class="x-ns_">镜像 | 百度企业网盘</a>
+                  </li>
+                  <li>
+                    <a href="http://od.zhm233.top/" target="_blank" class="x-ns_">镜像 | OneDrive</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="x-nsw">
+                <a href="https://bsguide.moevio.club/" class="x-nsk" aria-current="page">BS打分指南</a>
+              </li>
+              <li class="x-nsw">
+                <a href="#0" class="x-nsk">
+                  <span>联机服务器</span>
+                  <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
+                    <path d="M6,9l4-5H2Z"></path>
+                  </svg>
+                </a>
+                <ul class="x-nsz">
+                  <li>
+                    <a href="https://bbbear-wgzeyu.gtxcn.com/" class="x-ns_">CN_河北联通-WGzeyu</a>
+                  </li>
+                  <li>
+                    <a href="http://bs.zhm233.top/zhm/" class="x-ns_">CN_河南电信-张慧明</a>
+                  </li>
+                  <li>
+                    <a href="http://bs.zhm233.top/4t8d/" class="x-ns_">CN_河北电信-四通八达</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="x-not flex-grow x-iv x-tur">
+              <li class="x-nsw">
+                <a href="#0" class="x-nsk" aria-controls="qq-group">社区Q群</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+
+	<section id="cd-intro">
+		<div id="cd-intro-background"></div>
+		<div id="cd-intro-tagline">
+			<h1>Beat Saber模型制作教程</h1>
+		</div> <!-- cd-intro-tagline -->
+	</section> <!-- #cd-intro -->
+
+	<main class="cd-content">
+		<div class="cd-container">
+			<p style="text-align:center;background-color:red;color:white;display:none;" id="webpw">请更换为现代浏览器以支持WebP格式图像！目前只有IE、Safari与iOS不支持，<br>将显示为PNG格式图像。由于PNG压缩效率较低，所以图像可能加载缓慢。</p>
+			<!--h1 style="text-align: center;">更好地了解Rank系统、计分和加成项等内容的指南</h1>
+			<p style="text-align: center;">由<a href="https://bsaber.com/members/teknozfr/" target="_blank">TeknozFR</a>编写，<a href="https://space.bilibili.com/17539027" target="_blank" title="Vio">Vio</a>翻译为中文。</p>
+			<p style="text-align: center;">非常感谢<a href="https://space.bilibili.com/557131/" target="_blank" title="WGzeyu">WGzeyu</a>提供的大量技术支持、<a href="https://space.bilibili.com/22596629/" target="_blank" title="ani">ani</a>提供的大量翻译支持，以及精神支持、<a href="https://space.bilibili.com/5523787/" target="_blank" title="waika">waika</a>提供的部分翻译支持，以及<a href="https://steamcommunity.com/profiles/76561198199243262/" target="_blank" title="moran">漠然轻寒</a>提供的部分翻译支持以及翻译思路。</p>
+			<p style="text-align: center;">免责声明：这个指南于2019年2月17日制作（于2020年4-5月翻译），原作者会尽力保持其为最新，但仍然有某些信息不准确，甚至没有记录。本教程可以让大家更好的了解Rank计分系统和游戏的其他方面，但并不是这款游戏的完整教程，希望它对您有用。</p-->
+			<h1 style="text-align: center;">前言</h1>
+			<p>1. 做模型首先需要下载模型，这里提供几个模型站</p>
+			<p>（1） <a href="https://3d.nicovideo.jp/" target="_blank">https://3d.nicovideo.jp/</a>（需科学上网）</p>
+			<p>（2） <a href="https://bowlroll.net/" target="_blank">https://bowlroll.net/</a></p>
+			<p>（3） <a href="https://www.deviantart.com/" target="_blank">https://www.deviantart.com/</a></p>
+			<p>2. 本教程适用的模型格式为 .pmx .fbx</p>
+			<p>3. 本次教程使用模型来自Hololive</p>
+			<p>4. 使用软件 Blender Unity 2018.1.6f1</p>
+			<p>借物表：赤井はあと —— <a href="https://3d.nicovideo.jp/works/td63647" target="_blank">https://3d.nicovideo.jp/works/td63647</a></p>
+
+
+
+
+			<h1 style="text-align: center;">Blender</h1>
+			<p>steam下载blender</p>
+			<p>调中文：</p>
+
+			<p>记得把下面那几个勾上</p>
+
+			<p>安装插件：</p>
+			<p>1.	在github下载cats 插件 https://github.com/michaeldegroot/cats-blender-plugin/releases</p>
+
+			<p>选择第一个.zip下载</p>
+			<p>3. 安装刚才下载的插件</p>
+
+			<p>选择刚才下载的 .zip</p>
+			<p>4.启用cats插件</p>
+ 
+			<p>勾选侧栏</p>
+ 
+			<p>这时如果侧栏出现了CATS（如上图），则说明插件安装成功。</p>
+
+			<p>5.导入 .pmx </p>
+
+			<p>点击import model 选择模型</p>
+			<p>点击cats插件的 fix model 修复模型</p>
+
+			<p>6.创建一个骨骼</p>
+			<p>进入编辑模式</p>
+
+			<p>点击 姿态 下方的 Armature 让骨骼变成箭头指的那样。</p>
+ 
+			<p>在任意地方按 shift+A 创建一个骨骼</p>
+
+			<p>7.设置坐标</p>
+ 
+			<p>点击选中bone </p>
+ 
+			<p>点击下方的 “绿色骨头” —— 骨骼属性</p>
+
+			<p>将 头部 的坐标改为X:0 Y:0 Z:0</p>
+
+			<p>选中 Armature 下面的 Hips 记下 头部的XYZ坐标</p>
+
+			<p>选中Bone将刚才记下的XYZ坐标填入尾端</p>
+
+			<p>完成以上步骤后效果应如上图</p>
+
+			<p>8.设置关系：点击选择Hips点击下面关系中的父级</p>
+
+			<p>将父级输入刚才的Bone</p>
+
+			<p>完成以上步骤之后，骨骼之间的关系应该如上图</p>
+
+			<p>9.检查头骨</p>
+ 
+			<p>选择骨骼 Head，检查 头部 尾端 的XY值是否相同。</p>
+
+			<p>10. 导出模型</p>
+
+			<p>点击 文件->导出->FBX</p>
+			<p>导出至材质文件夹（也就是.pmx所在的文件夹）</p>
+
+			<p>效果如下：</p>
+
+
+			<p>Blender教程到此结束</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<h1 style="text-align: center;">准度和计分</h1>
+
+			<h3>计分倍率<img src="assets/img/image-1.webp" width="16.146%" alt="分数乘数" style="float:right; margin: 10px;" id="img-1"></h3>
+			<p>
+				在游戏内，您可以在左侧看到您的分数乘数，它是一个被白色圆圈包裹（之后称之为外圈）的数字。<br>
+				顾名思义，分数乘数会影响您的分数。在您开始打这首歌的时候，分数乘数为 x1 ，而外圈则会显示到下一个乘数的进度。当您击打一个方块并且分数乘数增加的时候，该方块的得分会被乘上最新的乘数，而不是之前的乘数。<br>
+				分数乘数分别为：1x, 2x, 4x 和 8x。当您丢失连击时（包括丢失方块，击打方向错误，光剑使用错误，击打炸弹以及被墙覆盖），分数乘数将减半。
+			</p>
+
+			<h3>得分</h3>
+			<p>在Beat Saber里得分并不简单，它不但取决于高连击和不丢失方块，还取决于每个方块的得分。</p>
+			<p>
+				每个方块的最大击打分为 115 分（不乘分数乘数）。击打方块时，必须用正确的角度击打，并且必须将方块在中间一分为二，才能得到最佳分数，如下：
+				<div align="center">
+					<table>
+						<!--tr> 
+							<th>挥剑角度</th>
+							<th>得分</th>
+						</tr-->
+						<tr>
+							<td>击打前挥100°</td>
+							<td>70分</td>
+						</tr>
+						<tr>
+							<td>击打后挥60°</td>
+							<td>30分</td>
+						</tr>
+						<tr>
+							<td>方块碎片两半一样大&nbsp;&nbsp;&nbsp;</td>
+							<td>15分</td>
+						</tr>
+					</table>
+				</div>
+			</p>
+			<p>这表明了使用正确的角度挥剑的重要性，因为这样您才能获得更高的分数。但请记住，击打不完美（bad cut）永远比丢掉方块好，因为丢失方块会被记为0分，断掉连击以及扣血。</p>
+
+			<h3>判定范围（hitboxes）<img src="assets/img/image-2.webp" width="40.885%" alt="判定范围1.9" style="float:right; margin: 10px;" id="img-2"></h3>
+			<p>在Beat Saber中，大多数人认为方块本身就是判定范围，这是一个很常见的误解。尽管在之前是这样的，但是随着游戏更新，判定范围更改了不少次，图中是当前版本的判定范围。</p>
+			<p>如图，当前版本的判定范围在前方和边缘都加大了，所以这里建议您使用剑尖来击打，以便获得完美击打（best cut）。</p>
+			<p><i>据说在将来的版本中会添加“Pro Modifier”,	它可以判定范围变为方块本身。</i></p>
+
+			<h3>准度</h3>
+			<p>准确度可以这么理解：您目前的得分相对于满分的占比。</p>
+			<p>准确度可以在选歌页面的 Player Settings->Advanced HUD 开启，开启后准确度显示会在左侧，它以百分数和字母表示，它可以很好的反应您得分的能力。</p>
+			<p>准确度通过命中方块，分数乘数，还有丢失方块来计算。<br>下图列举了准确度和字母的关系：</p>
+			<p align="center"><img width="100%" src="assets/img/score2.webp" id="img-3"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
+			<p>如上图，数字对应的是百分数（%），数字下方是对应的字母。<br>举个例子：如果您一首曲子打了85%，那么您对应字母的就是 S 。</p>
+
+			<h1 style="text-align: center;">Rank过程<!--Rank与Unrank--></h1>
+
+			<h3>Rank与Unrank</h3>
+			<p>大多数人刚开始会花不少时间来了解ranked和unranked的区别,虽然谱子被rank并不会让它变得更好；但是这对于要进行排名的新玩家来说很重要。</p>
+
+			<h3>Ranked谱面</h3>
+			<p>Rank后的谱子会有一个难度等级（也被称为真实难度），这个等级用星号（⭐）来表示（详情见下方的 难度 项）。</p>
+			<p>每个等级都有对应数量的pp点（Performance Points）；玩家可以通过完成被rank的谱子来获得pp，而准确度越高，获得的pp越多。</p>
+			<p>Rank后的谱子大多数都是良好的谱子，不会出现塞爆，同向方块，以及其他难以击打的情况；注意：想在排行榜上升排名只有去打Rank的谱子才行。</p>
+			<p><i>对此有疑问如：pp是什么？rank组是什么？ 请继续看，下面详细讲述了这些问题。</i></p>
+
+			<h3>Unranked谱面</h3>
+			<p>所有人都可以使用 MediocreMapAssistant2（MMA2）这类谱面编辑器来做谱并且上传至Beatsaver，但是上传至Beatsaver并不需要审核，所以谱面的质量参差不齐。</p>
+			<p>而Uranked的谱子就是在Beatsaver发布并且没有经过 rank组 审核的谱子。</p>
+			<p>这类谱子并没有标注难度等级 ⭐，也就是说您并不知道它的真实难度（不知道它适不适合您）；也不知道具体谱面质量如何（总体质量可以通过观察点赞数和点踩数知晓）</p>
+			<p><i>请注意：谱面内的难度（例如Expert）并不代表真实难度，因为它是作者自定义的难度；</i><br><i>举个例子：在Beatsaver下载的谱子，可能会出现hard比expert+难的情况。</i></p>
+
+			<h3>谱面Rank过程</h3>
+			<p>有了Score Saber这个排名插件之后，需要许多高质量/可排名性强的谱面以便进行排名，于是就在discord成立了一个谱面审核小组（也就是rank组 之后称为 审核小组）。</p>
+			<p>审核小组创建了 审核标准 ，所以并不是所有的谱面都能被rank。ranked的谱面必须符合审核标准；如果审核标准更新后，该谱面不符合审核标准，将会被取消ranked（unrank）。</p>
+			<p>那么这些谱子是怎么被排名的呢？十分简单：谱师将制作好的谱子提交到discord的审核频道，审核人员（rankers）将会初审该谱子，如果有问题则告诉谱师需要修改的地方。</p>
+			<p>如果没有问题则会通过初审，之后由整个审核小组投票，如过没有反对票，则通过审核，投放到qualified队列，由玩家测试；若玩家没有意见则会正式发布，若玩家有意见则会重新审核后通知谱师修改。</p>
+			<p>审核小组通常会花费大量的个人时间来完成审核，但他们常常无缘无故地受到批评；所以请对他们表示感谢，以及...给他们一些爱♥</p>
+
+			<h3>难度</h3>
+            <p>上文提到了难度是由作者自定义的，也就是说您看到的expert+或者hard都不是该谱面真实难度，而是针对于这个谱面的难度（我个人称它为 虚假难度）；所以您下载unranked的谱子的时候，可能会出现easy难度比expert+还难的情况。</p>
+			<p>
+				这时就需要一个真实难度来给ranked谱子标注难度，真实难度用⭐表示，如下图：<br>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/rank-1.webp" title="真实难度" id="img-4"></div>
+				
+			</p>
+			<p>
+				值得注意的是，unranked的谱子并没有真实难度（有例外，在下方做出了解释），如图：<br>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/unrank-2.webp" id="img-5"></div><br>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/unrank-1.webp" id="img-6"></div>
+			</p>
+			<p>所以，如果你的技术还不够好，笔者这里建议您去打一些真实难度比较低的谱子。</p>
+			<p><i>如果一首谱子被rank后又被unrank了，那么这首谱子也会保留星级；因为星级是rank组制定的</i></p>
+
+			<h1 style="text-align: center;">Rank系统（PP系统）</h1>
+
+			<p>PP系统是rank中最难理解的一部分（其实很简单），实际上我发现大部分人都会对此产生一定错误的理解，所以现在才有了这条指南。</p>
+
+			<h3>我应该如何获得PP分，排名系统如何运作？</h3>
+			<p>你可以在 <a href="https://scoresaber.com/" target="_blank">scoresaber.com</a> 直接搜索你的steam昵称或oculus账户名（注意先切换到global ranking，默认页面是搜索歌曲名）</p>
+			<p align="center">
+				<img src="assets/img/s1.webp" width="100%" id="img-7"><br>
+				<img src="assets/img/s2.webp" width="100%" id="img-8">
+			</p>
+			<p>PP即Performance Points，通过打被rank的谱面得到（即俗称的pp曲）。一张谱面的PP值是rank组通过算法以及人工修正得到的，一般来说越难的谱面PP越高。</p>
+			<p>为了防止被恶意运用，该算法是保密的。你获得的pp与你的完成度挂钩，具体如下曲线（橙色新曲线）：</p>
+			<p align="center"><img src="assets/img/PPv3.2.webp" width="100%" title="PP曲线" id="img-9"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
+
+			<h3>PP系统如何工作，什么是加权PP？</h3>
+			<p>玩家总pp的计算方法是 该曲获得 PP*0.965^(n-1) ，n为你所有刷过pp曲得到的pp数量从大到小排序的序数（详见图片）。<img src="assets/img/jiaquan.webp" width="25.130%" style="float:right; margin: 10px;" id="img-10"></p>
+			<p>你会发现在你的scoresaber主页中歌曲后的pp数值有两个。蓝色的指你获得的pp（后统称获得pp），而括号内的灰色pp指计算上述计算过 PP*0.965^(n-1) 后得到的实际pp（后统称实际pp）。</p>
+			<p align="center"><img src="assets/img/song2.webp" width="100%" title="PP系统" id="img-11"></p>
+			
+			<h3>为什么我的总PP不如我在新分数中获得的加权PP那样快？</h3>
+			<p>每当你刷完一首新pp曲，总pp增加量并不等于这首歌的实际pp，因为排在这首歌之后的歌都会被往后挤一个位置并被多乘一次0.965^(n-1)。当你把某一首歌的完成度刷的更高，如果这首歌的排名位置没有变，则总pp增量等于实际pp增量。</p>
+
+			<h3>如何改善并获得更多PP？</h3>
+			<p>多练。首先你可以去你的scoresaber主页，将第一页的歌曲完成度提高；其次可以将你没有打过的歌，或者完成度不高的歌再打几遍。这里有有一个工具可以帮助你查询这些歌曲（打不开可能需要科学上网）：<a href="https://scoresaber.balibalo.xyz/peepee" target="_blank" title="THISISMY PEEPEE">THISISMY PEEPEE</a></p>
+
+			<h1 style="text-align: center;">加成项</h1>
+			<h3>加成项和Ranked歌曲</h3>
+			<p>从V12.0p1版本之后就有很多加分/减分选项啦！不同的选项有不同的效果，基本上分为加分和减分项。他们会改变谱面打完之后的分数。减分项在所有谱面中都适用，但是要注意在pp曲中加分项只有nuketime和kry的overkill有用。以下是具体解释：</p>
+
+			<h3>No Fail (-0.50)</h3>
+			<p>简称NF，秘技：血条消失之术。没有了血条你就不会死了。如标题所示NF会让你的得分减少一半，以下同理。</p>
+
+			<h3>No Obstacles (-0.05)</h3>
+			<p>移除所有的墙。</p>
+
+			<h3>No Bombs (-0.10)</h3>
+			<p>移除所有的炸弹。</p>
+
+			<h3>Slower Song (-0.30)</h3>
+			<p>谱面速度由100%->85% 。</p>
+
+			<h3>Insta Fail (0.00)</h3>
+			<p>Miss即死</p>
+
+			<h3>Battery Energy (0.00)</h3>
+			<p>MISS好几个就会死</p>
+
+			<h3>Disappearing Arrows (+0.07)</h3>
+			<p>方块上的箭头会逐渐消失。</p>
+
+			<h3>Faster Song (+0.08)</h3>
+			<p>谱面速度由100%->120% </p>
+
+			<h3>Ghost Notes (+0.11)</h3>
+			<p>方块会逐渐隐形 。</p>
+
+			<h1 style="text-align: center;">手柄握法</h1>
+
+			<h3>为什么要更换握法？</h3>
+			<p>无论使用哪种VR设备游玩BeatSaber，握法都是很重要的，因为它可以改善游戏体验（尤其是VIVE玩家）。打速度较快，交叉较多的歌时，正常的握法就会出现一些问题，例如VIVE的手柄非常沉，所以需要用更大的力来击打，但是这会对你的手腕和手臂造成劳损。越玩到后期你越会发现用手腕打歌会比用手臂轻松得多。下面列举出了一些常用的握法，如果以下的握法都不合适的话，你可以使用对于你来说比较舒适的握法。</p>
+
+			<h3>HTC Vive：</h3>
+			<p><img src="assets/img/vive.webp" width="100%" title="vive" id="img-12"></p>
+
+			<h3>Oculus Rift CV1：</h3>
+			<p><img src="assets/img/cv1.webp" width="100%" title="cv1" id="img-13"></p>
+
+			<h3>Oculus Rift S：</h3>
+			<p><img src="assets/img/ocs.webp" width="100%" title="ocs" id="img-14"></p>
+
+			<h3>Windows Mixed Reality：</h3>
+			<p><img src="assets/img/MR.webp" width="100%" title="MR" id="img-15"></p>
+
+			<h3>Valve Index：</h3>
+			<p>待补充，可联系QQ1165837178 或者 加入QQ群941873202 @群内xxxx果子狸来补充</p>
+
+			<h1 style="text-align: center;">一些提示和链接</h1>
+
+			<h3>提示与技巧 ：</h3>
+			<p>玩了这么久BeatSaber之后，我遇到了非常多的瓶颈；瓶颈真的很烦人，因为这个要很久才能突破。以下是一些提高自己的小技巧：</p>
+
+			<h3>挑战自己</h3>
+			<p>很多人都从来不去挑战难的谱面，而是一直打几张自己喜欢的，但是不得不说，去多下载一些其他歌，去多试试自己最打不来的东西。</p>
+
+			<h3>不要只刷排名</h3>
+			<p>虽然打rank是提高的途径，但是也不一定一直是。很多非rank的好谱面也可以提高你的水平（谱面可以找群里大佬问）；虽然打rank能提高排名，但是终究是和水平挂钩的。</p>
+
+			<h3>记录自己的游戏过程</h3>
+			<p>在自己某首歌分数右边有一个小小的回放箭头，多去看看回放，发现自己需要改进的常见错误是有益的。（此处ani更建议直播让大佬帮你看）</p>
+
+			<h3>观看厉害的玩家回放并向他们提问</h3>
+			<p>如果可以的话，可以尝试看一看别人的记录（非rank曲的回放记录不可用），尝试学一下别人的手法总是对自己有帮助的。也可以请教大佬，但是用敬语好好提问，不要阴阳怪气。</p>
+
+			<h3>不要想太多</h3>
+			<p>如果你一直刷不动某一张谱，不要整天想，这样容易心态爆炸，放着它以后再刷就好了。</p>
+
+			<h3>练习难的排布</h3>
+			<p>有些排布非常难，如新人杀手换轨等。如果你打不过某张谱面某种特别典型的排布，建议可以打开练习模式先慢速练习。前期一般依靠建立肌肉记忆来克服难的排布。</p>
+
+			<h3>玩得开心</h3>
+			<p>说到底这是个游戏，游戏是为了开心的。如果某一张破谱pp又高，又难打，自己实在难受的话，还是建议不要刷了（反正我会去刷），当你玩的开心的时候，你就会有迷之进步。</p>
+
+			<h3>打分设备推荐</h3>
+			<p>现在的VR设备，极限追踪速度还远跟不上人类的手速。所以，可能和印象不同，<br>一些人们认为追踪精确的设备，在打高BPM曲子快速挥动时追踪不一定还会好。</p>
+			<p>丢失追踪后，手柄会停下或者飞走。如果不想Fail，只能暂停。<br>可暂停又会影响节奏，如果你打算刷高难曲，建议尽量避免购买追踪差的设备。</p>
+			<p><img src="assets/img/bsvr5.webp" width="100%" id="img-16"></p>
+
+		</div>
+	</main> <!-- cd-content -->
+
+    <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="qq-group">
+      <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+        <header class="x-sbg-o x-lb x-la flex items-center justify-between">
+          <h4 class="x-cs" id="modal-title-2">社区Q群</h4>
+          <button class="reset x-nom x-noy js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17"></line>
+                <line x1="17" y1="3" x2="3" y2="17"></line>
+              </g>
+            </svg>
+          </button>
+        </header>
+        <div class="x-lb x-la">
+          <div class="text-component">
+            <p id="modal-description-2">
+              <p>
+                BeatSaber中文社区①：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0d447457b6fb345bb543cefb173fa9f4b2fa49289c31ce99824ff9d9788b7ed1">810303476</a>
+              </p>
+              <p>
+                BeatSaber中文社区②：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=372e50cce5d476c57ce0597a720bea327cab2a43d7b102ff78277860c2fa413d">639959292</a>
+              </p>
+              <p>
+                BeatSaber打分新手群：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=ca3854939b2813e16df868273c66266654e9a4f0c13b63d2d8761fa54dd98477">941873202</a><br>
+                入群条件：无。只要你打算打分，就可以加入
+              </p>
+              <p>
+                BeatSaber核心玩家群：916499592<br>
+                入群条件：不开减分项打过NUCLEAR-STAR（核星）<br>
+                下载链接：<a href="https://beatsaver.com/beatmap/28c5" target="_blank">https://beatsaver.com/beatmap/28c5</a><br>
+                注意事项：必须安装Mod：ScoreSaber，成功传分才有效。
+              </p>
+              <p>
+                BeatSaber谱面制作群：1101964663
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Resource jQuery -->
+    <script src="assets/header/js/util.js?v=71"></script>
+    <script src="assets/header/js/flexi-header.min.js?v=8"></script>
+    <script src="assets/header/js/modal-window.min.js?v=6"></script>
+    <script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278810287'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1278810287%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script>
+      function cwebp(tupianshuliang) {
+        if (!canUseWebP()) {
+          document.getElementById("webpw").style.display = "";
+          document.getElementById("cd-intro-background").style.background = "url('assets/img/cd-intro-background.png') no-repeat center center";
+          document.getElementById("cd-intro-background").style.backgroundSize = "cover";
+          for (i = 1; i <= tupianshuliang; i++) {
+            console.log("img-" + i);
+            document.getElementById("img-" + i).src = document.getElementById("img-" + i).src.replace(".webp", ".png");
+          }
+        }
+      }
+
+      function canUseWebP() {
+        var elem = document.createElement('canvas');
+        if ( !! (elem.getContext && elem.getContext('2d'))) {
+          // was able or not to get WebP representation
+          return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+        }
+        // very old browser like IE 8, canvas not supported
+        return false;
+      }
+    </script>
+  </body>
+</html>

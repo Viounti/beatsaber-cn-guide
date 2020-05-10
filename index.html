@@ -39,7 +39,7 @@
     </noscript>
     <link rel="stylesheet" href="assets/css/reset.css?v=2">
     <!-- CSS reset -->
-    <link rel="stylesheet" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
     <!-- Resource style -->
     <style>
 	  .nav{ /*固定导航栏*/ 
@@ -54,6 +54,13 @@
 	      height:50px;
 	    }
 	  }
+	#cd-intro #cd-intro-background {
+		height: 100%;
+		width: 100%;
+		background: url("assets/img/score/cd-intro-background.webp") no-repeat center center;
+		background-size: cover;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	}
 	</style>
   </head>
 
@@ -158,7 +165,7 @@
 
 			<h1 style="text-align: center;">准度和计分</h1>
 
-			<h3>计分倍率<img src="assets/img/image-1.webp" width="16.146%" alt="分数乘数" style="float:right; margin: 10px;" id="img-1"></h3>
+			<h3>计分倍率<img src="assets/img/score/image-1.webp" width="16.146%" alt="分数乘数" style="float:right; margin: 10px;" id="img-1"></h3>
 			<p>
 				在游戏内，您可以在左侧看到您的分数乘数，它是一个被白色圆圈包裹（之后称之为外圈）的数字。<br>
 				顾名思义，分数乘数会影响您的分数。在您开始打这首歌的时候，分数乘数为 x1 ，而外圈则会显示到下一个乘数的进度。当您击打一个方块并且分数乘数增加的时候，该方块的得分会被乘上最新的乘数，而不是之前的乘数。<br>
@@ -192,7 +199,7 @@
 			</p>
 			<p>这表明了使用正确的角度挥剑的重要性，因为这样您才能获得更高的分数。但请记住，击打不完美（bad cut）永远比丢掉方块好，因为丢失方块会被记为0分，断掉连击以及扣血。</p>
 
-			<h3>判定范围（hitboxes）<img src="assets/img/image-2.webp" width="40.885%" alt="判定范围1.9" style="float:right; margin: 10px;" id="img-2"></h3>
+			<h3>判定范围（hitboxes）<img src="assets/img/score/image-2.webp" width="40.885%" alt="判定范围1.9" style="float:right; margin: 10px;" id="img-2"></h3>
 			<p>在Beat Saber中，大多数人认为方块本身就是判定范围，这是一个很常见的误解。尽管在之前是这样的，但是随着游戏更新，判定范围更改了不少次，图中是当前版本的判定范围。</p>
 			<p>如图，当前版本的判定范围在前方和边缘都加大了，所以这里建议您使用剑尖来击打，以便获得完美击打（best cut）。</p>
 			<p><i>据说在将来的版本中会添加“Pro Modifier”,	它可以判定范围变为方块本身。</i></p>
@@ -201,7 +208,7 @@
 			<p>准确度可以这么理解：您目前的得分相对于满分的占比。</p>
 			<p>准确度可以在选歌页面的 Player Settings->Advanced HUD 开启，开启后准确度显示会在左侧，它以百分数和字母表示，它可以很好的反应您得分的能力。</p>
 			<p>准确度通过命中方块，分数乘数，还有丢失方块来计算。<br>下图列举了准确度和字母的关系：</p>
-			<p align="center"><img width="100%" src="assets/img/score2.webp" id="img-3"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
+			<p align="center"><img width="100%" src="assets/img/score/score2.webp" id="img-3"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
 			<p>如上图，数字对应的是百分数（%），数字下方是对应的字母。<br>举个例子：如果您一首曲子打了85%，那么您对应字母的就是 S 。</p>
 
 			<h1 style="text-align: center;">Rank过程<!--Rank与Unrank--></h1>
@@ -232,13 +239,13 @@
             <p>上文提到了难度是由作者自定义的，也就是说您看到的expert+或者hard都不是该谱面真实难度，而是针对于这个谱面的难度（我个人称它为 虚假难度）；所以您下载unranked的谱子的时候，可能会出现easy难度比expert+还难的情况。</p>
 			<p>
 				这时就需要一个真实难度来给ranked谱子标注难度，真实难度用⭐表示，如下图：<br>
-				<div style="text-align:center;"><img width="61.459%" src="assets/img/rank-1.webp" title="真实难度" id="img-4"></div>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/score/rank-1.webp" title="真实难度" id="img-4"></div>
 				
 			</p>
 			<p>
 				值得注意的是，unranked的谱子并没有真实难度（有例外，在下方做出了解释），如图：<br>
-				<div style="text-align:center;"><img width="61.459%" src="assets/img/unrank-2.webp" id="img-5"></div><br>
-				<div style="text-align:center;"><img width="61.459%" src="assets/img/unrank-1.webp" id="img-6"></div>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/score/unrank-2.webp" id="img-5"></div><br>
+				<div style="text-align:center;"><img width="61.459%" src="assets/img/score/unrank-1.webp" id="img-6"></div>
 			</p>
 			<p>所以，如果你的技术还不够好，笔者这里建议您去打一些真实难度比较低的谱子。</p>
 			<p><i>如果一首谱子被rank后又被unrank了，那么这首谱子也会保留星级；因为星级是rank组制定的</i></p>
@@ -250,17 +257,17 @@
 			<h3>我应该如何获得PP分，排名系统如何运作？</h3>
 			<p>你可以在 <a href="https://scoresaber.com/" target="_blank">scoresaber.com</a> 直接搜索你的steam昵称或oculus账户名（注意先切换到global ranking，默认页面是搜索歌曲名）</p>
 			<p align="center">
-				<img src="assets/img/s1.webp" width="100%" id="img-7"><br>
-				<img src="assets/img/s2.webp" width="100%" id="img-8">
+				<img src="assets/img/score/s1.webp" width="100%" id="img-7"><br>
+				<img src="assets/img/score/s2.webp" width="100%" id="img-8">
 			</p>
 			<p>PP即Performance Points，通过打被rank的谱面得到（即俗称的pp曲）。一张谱面的PP值是rank组通过算法以及人工修正得到的，一般来说越难的谱面PP越高。</p>
 			<p>为了防止被恶意运用，该算法是保密的。你获得的pp与你的完成度挂钩，具体如下曲线（橙色新曲线）：</p>
-			<p align="center"><img src="assets/img/PPv3.2.webp" width="100%" title="PP曲线" id="img-9"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
+			<p align="center"><img src="assets/img/score/PPv3.2.webp" width="100%" title="PP曲线" id="img-9"><br>感谢<a href="https://space.bilibili.com/557131" target="_blank" title="WGzeyu">WGzeyu</a>提供的图片</p>
 
 			<h3>PP系统如何工作，什么是加权PP？</h3>
-			<p>玩家总pp的计算方法是 该曲获得 PP*0.965^(n-1) ，n为你所有刷过pp曲得到的pp数量从大到小排序的序数（详见图片）。<img src="assets/img/jiaquan.webp" width="25.130%" style="float:right; margin: 10px;" id="img-10"></p>
+			<p>玩家总pp的计算方法是 该曲获得 PP*0.965^(n-1) ，n为你所有刷过pp曲得到的pp数量从大到小排序的序数（详见图片）。<img src="assets/img/score/jiaquan.webp" width="25.130%" style="float:right; margin: 10px;" id="img-10"></p>
 			<p>你会发现在你的scoresaber主页中歌曲后的pp数值有两个。蓝色的指你获得的pp（后统称获得pp），而括号内的灰色pp指计算上述计算过 PP*0.965^(n-1) 后得到的实际pp（后统称实际pp）。</p>
-			<p align="center"><img src="assets/img/song2.webp" width="100%" title="PP系统" id="img-11"></p>
+			<p align="center"><img src="assets/img/score/song2.webp" width="100%" title="PP系统" id="img-11"></p>
 			
 			<h3>为什么我的总PP不如我在新分数中获得的加权PP那样快？</h3>
 			<p>每当你刷完一首新pp曲，总pp增加量并不等于这首歌的实际pp，因为排在这首歌之后的歌都会被往后挤一个位置并被多乘一次0.965^(n-1)。当你把某一首歌的完成度刷的更高，如果这首歌的排名位置没有变，则总pp增量等于实际pp增量。</p>
@@ -305,16 +312,16 @@
 			<p>无论使用哪种VR设备游玩BeatSaber，握法都是很重要的，因为它可以改善游戏体验（尤其是VIVE玩家）。打速度较快，交叉较多的歌时，正常的握法就会出现一些问题，例如VIVE的手柄非常沉，所以需要用更大的力来击打，但是这会对你的手腕和手臂造成劳损。越玩到后期你越会发现用手腕打歌会比用手臂轻松得多。下面列举出了一些常用的握法，如果以下的握法都不合适的话，你可以使用对于你来说比较舒适的握法。</p>
 
 			<h3>HTC Vive：</h3>
-			<p><img src="assets/img/vive.webp" width="100%" title="vive" id="img-12"></p>
+			<p><img src="assets/img/score/vive.webp" width="100%" title="vive" id="img-12"></p>
 
 			<h3>Oculus Rift CV1：</h3>
-			<p><img src="assets/img/cv1.webp" width="100%" title="cv1" id="img-13"></p>
+			<p><img src="assets/img/score/cv1.webp" width="100%" title="cv1" id="img-13"></p>
 
 			<h3>Oculus Rift S：</h3>
-			<p><img src="assets/img/ocs.webp" width="100%" title="ocs" id="img-14"></p>
+			<p><img src="assets/img/score/ocs.webp" width="100%" title="ocs" id="img-14"></p>
 
 			<h3>Windows Mixed Reality：</h3>
-			<p><img src="assets/img/MR.webp" width="100%" title="MR" id="img-15"></p>
+			<p><img src="assets/img/score/MR.webp" width="100%" title="MR" id="img-15"></p>
 
 			<h3>Valve Index：</h3>
 			<p>待补充，可联系QQ1165837178 或者 加入QQ群941873202 @群内xxxx果子狸来补充</p>
@@ -348,7 +355,7 @@
 			<h3>打分设备推荐</h3>
 			<p>现在的VR设备，极限追踪速度还远跟不上人类的手速。所以，可能和印象不同，<br>一些人们认为追踪精确的设备，在打高BPM曲子快速挥动时追踪不一定还会好。</p>
 			<p>丢失追踪后，手柄会停下或者飞走。如果不想Fail，只能暂停。<br>可暂停又会影响节奏，如果你打算刷高难曲，建议尽量避免购买追踪差的设备。</p>
-			<p><img src="assets/img/bsvr5.webp" width="100%" id="img-16"></p>
+			<p><img src="assets/img/score/bsvr5.webp" width="100%" id="img-16"></p>
 
 		</div>
 	</main> <!-- cd-content -->
@@ -405,7 +412,7 @@
       function cwebp(tupianshuliang) {
         if (!canUseWebP()) {
           document.getElementById("webpw").style.display = "";
-          document.getElementById("cd-intro-background").style.background = "url('assets/img/cd-intro-background.png') no-repeat center center";
+          document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
           document.getElementById("cd-intro-background").style.backgroundSize = "cover";
           for (i = 1; i <= tupianshuliang; i++) {
             console.log("img-" + i);
