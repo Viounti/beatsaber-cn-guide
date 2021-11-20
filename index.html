@@ -430,7 +430,9 @@
 
         }
       }
-
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        alert("本站不兼容远古IE浏览器，请更换为现代浏览器访问，推荐使用Chrome");
+    }
       function canUseWebP() {
         var elem = document.createElement('canvas');
         if ( !! (elem.getContext && elem.getContext('2d'))) {
