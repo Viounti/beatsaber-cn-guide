@@ -51,7 +51,7 @@
 </script>
   </head>
 
-  <body onload="cwebp();">
+  <body onload="checkbrowser();">
 
     <div style="background:#FFF" class="nav">
 
@@ -404,57 +404,83 @@
 	  </div>
 	</div>
 
-	<div class="notice notice--v2 js-notice" style="display:none;" id="webpw">
-	  <div class="notice__banner bg padding-y-sm shadow-md">
-	    <div class="container max-width-xl">
-	      <div class="flex justify-between items-center@sm">
-	        <p class="text-sm">
-	          <span style="white-space:nowrap;">请更换为现代浏览器以支持WebP图像！</span><span style="white-space:nowrap;">只有IE与Apple不支持，将显示为PNG。</span><span style="white-space:nowrap;">由于PNG压缩率低，图像可能加载缓慢。</span>
-	        </p>
-	        <button class="reset notice__close-btn margin-left-sm js-notice__hide-control">
-	          <svg class="icon icon--xs" viewBox="0 0 16 16"><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
-	        </button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+    <div class="notice js-notice" id="oldbrowser">
+      <div class="container">
+        <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
+          <div class="text-component text-sm margin-bottom-md" style="margin-bottom:1em;">
+            <h4>请升级或更换你的浏览器</h4>
+            <p>当前浏览器版本过低，<a style="text-decoration:none;" target="_blank" href="https://bs.wgzeyu.com/test/">不兼容新特性</a>，会导致一些地方不能正确加载、渲染。</p>
+          </div>
+          <ul class="grid gap-xs">
+            <li class="col-12">
+              <a class="btn btn--primary width-100%" target="_blank" href="https://google.cn/chrome/" rel="nofollow">下载新版Chrome浏览器</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Resource jQuery -->
     <script src="assets/codyhouse/js/scripts.min.js"></script>
     <script>
-      function cwebp(tupianshuliang) {
-        if (!canUseWebP()) {
-
-        	document.getElementById("webpw").style.display = "";
-        	document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
-        	document.getElementById("cd-intro-background").style.backgroundSize = "cover";
-
-        	var newsrc;
-        	var _el = [],
-			_el= document.getElementsByTagName('img');
-			for (var i=0; i<_el.length; i++) {
-				newsrc = _el[i].src;
-				newsrc = newsrc.replace(".webp", ".png");
-				//newsrc = newsrc.replace("assets/img/", "assets/img/"); //png太大，目前只打算让小文件走jsdelivr
-				_el[i].src = newsrc;
-			}
-
-        }
-      }
-    if (!!window.ActiveXObject || "ActiveXObject" in window) {
-        alert("本站不兼容远古IE浏览器，请更换为现代浏览器访问，推荐使用Chrome");
-    }
-      function canUseWebP() {
-        var elem = document.createElement('canvas');
-        if ( !! (elem.getContext && elem.getContext('2d'))) {
-          // was able or not to get WebP representation
-          return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-        }
-        // very old browser like IE 8, canvas not supported
-        return false;
-      }
+		function checkbrowser() {
+			let jinggao = false;
+		    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+		        jinggao = true;
+		        alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
+		    } else if (!('IntersectionObserver' in window) || navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
+		        jinggao = true;
+		    } else {
+		        jinggao = false;
+		    }
+			check_webp_feature('lossless', function (feature, isSupported) {
+			    if (isSupported) {
+			    	if (!jinggao) {
+			    		document.getElementById("oldbrowser").style.display = "none";
+			    	}
+			    } else {
+			        document.getElementById("webpw").style.display = "";
+			        document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
+			        document.getElementById("cd-intro-background").style.backgroundSize = "cover";
+			        var newsrc;
+			        var _el = [],
+			        _el = document.getElementsByTagName('img');
+			        for (var i = 0; i < _el.length; i++) {
+			            newsrc = _el[i].src;
+			            newsrc = newsrc.replace(".webp", ".png");
+			            _el[i].src = newsrc;
+			        }
+			    }
+			});
+		}
+		function check_webp_feature(feature, callback) {
+		    var kTestImages = {
+		        lossy: "",
+		        lossless: "UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==",
+		        alpha: "",
+		        animation: ""
+		    };
+		    var img = new Image();
+		    img.onload = function () {
+		        var result = (img.width > 0) && (img.height > 0);
+		        callback(feature, result);
+		    };
+		    img.onerror = function () {
+		        callback(feature, false);
+		    };
+		    img.src = "data:image/webp;base64," + kTestImages[feature];
+		}
+		function getChromiumVersion() {
+		    /*ChatGPT写的*/
+		    if (window.chrome) {
+		        const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+		        const version = raw ? parseInt(raw[2], 10) : false;
+		        return version || 404;
+		    }
+		    return 404;
+		}
     </script>
   </body>
 </html>
