@@ -426,6 +426,7 @@
     <script src="assets/codyhouse/js/scripts.min.js"></script>
     <script>
 		function checkbrowser() {
+			alert("调试：开始");
 			let jinggao = false;
 		    if (!!window.ActiveXObject || "ActiveXObject" in window) {
 		        jinggao = true;
@@ -436,16 +437,20 @@
 		        jinggao = false;
 		    }
 	        try {
+	        	alert("调试：开始检查WebP兼容性");
 				check_webp_feature('lossless', function (feature, isSupported) {
 				    if (isSupported) {
+				    	alert("调试：兼容WebP");
 				    	if (!jinggao) {
 				    		document.getElementById("oldbrowser").style.display = "none";
 				    	}
 				    } else {
+				    	alert("调试：不兼容WebP");
 			        	changewebptopng();
 				    }
 				});
 	        } catch (error) {
+	        	alert("调试：错误，开始替换");
 	        	changewebptopng();
 	        }
 		}
@@ -469,7 +474,6 @@
 		function changewebptopng() {
         	document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
         	document.getElementById("cd-intro-background").style.backgroundSize = "cover";
-
         	var newsrc;
         	var _el = [],
 			_el= document.getElementsByTagName('img');
