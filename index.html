@@ -451,14 +451,18 @@
 		        document.getElementById("oldbrowser").style.display = "none";
 		    }
 		}
-		function getChromiumVersion() {/*ChatGPT写的*/
-		    if (window.chrome) {
-		        const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
-		        const version = raw ? parseInt(raw[2], 10) : false;
-		        return version || 404;
-		    }
-		    return 404;
-		}
+      function getChromiumVersion() {
+        try {
+          if (window.chrome) {
+            const raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+            const version = raw ? parseInt(raw[2], 10) : false;
+            return version || 404;
+          }
+        } catch (error) {
+          return 500;
+        }
+        return 501;
+      }
     </script>
 	<script>
 		check_webp_feature('lossless', function (feature, isSupported) {
