@@ -441,16 +441,7 @@
 			    		document.getElementById("oldbrowser").style.display = "none";
 			    	}
 			    } else {
-		        	document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
-		        	document.getElementById("cd-intro-background").style.backgroundSize = "cover";
-		        	var newsrc;
-		        	var _el = [],
-					_el= document.getElementsByTagName('img');
-					for (var i=0; i<_el.length; i++) {
-						newsrc = _el[i].src;
-						newsrc = newsrc.replace(".webp", ".png");
-						_el[i].src = newsrc;
-					}
+		        	changewebptopng();
 			    }
 			});
 		}
@@ -470,6 +461,21 @@
 		        callback(feature, false);
 		    };
 		    img.src = "data:image/webp;base64," + kTestImages[feature];
+		}
+		function changewebptopng() {
+        	document.getElementById("webpw").style.display = "";
+        	document.getElementById("cd-intro-background").style.background = "url('assets/img/score/cd-intro-background.png') no-repeat center center";
+        	document.getElementById("cd-intro-background").style.backgroundSize = "cover";
+
+        	var newsrc;
+        	var _el = [],
+			_el= document.getElementsByTagName('img');
+			for (var i=0; i<_el.length; i++) {
+				newsrc = _el[i].src;
+				newsrc = newsrc.replace(".webp", ".png");
+				//newsrc = newsrc.replace("assets/img/", "assets/img/"); //png太大，目前只打算让小文件走jsdelivr
+				_el[i].src = newsrc;
+			}
 		}
 		function getChromiumVersion() {
 		    /*ChatGPT写的*/
