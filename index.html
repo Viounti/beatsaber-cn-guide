@@ -53,10 +53,8 @@
 </script>
   </head>
 
-  <body onload="checkbrowser();">
-
+  <body>
     <div style="background:#FFF" class="nav">
-
 	<header class="f-header position-relative js-f-header">
 	  <div class="f-header__mobile-content container max-width-lg">
 	    <a href="https://space.bilibili.com/17539027" target="_blank" class="f-header__logo">
@@ -442,7 +440,7 @@
     <!-- Resource jQuery -->
     <script src="assets/codyhouse/js/scripts.min.js"></script>
     <script>
-		function checkbrowser() {
+
 		    if (!!window.ActiveXObject || "ActiveXObject" in window) {
 		        alert("您正在使用的浏览器版本过低，可能会导致网页加载不正常！\n\n\n推荐更换浏览器打开本网页：\n\n如果你开启了系统更新、正在使用Win10/11，\n请使用系统自带的Edge浏览器来打开本网页；\n\n其他情况下请安装Chrome浏览器：google.cn/chrome");
 		    } else if (!('IntersectionObserver' in window) || navigator.userAgent.includes("Edge") || getChromiumVersion() < 58) {
@@ -450,7 +448,7 @@
 		    } else {
 		        document.getElementById("oldbrowser").style.display = "none";
 		    }
-		}
+
       function getChromiumVersion() {
         try {
           if (window.chrome) {
