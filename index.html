@@ -406,6 +406,33 @@
 	  </div>
 	</div>
 
+    <div class="notice js-notice" id="jsfzljnotice" style="display:none;">
+      <div class="container">
+        <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
+          <div class="text-component text-sm margin-bottom-md" style="margin-bottom:1em;">
+            <h4>部分网页在江苏省内不可用</h4>
+            <p>江苏省以反诈骗名义拦截了我们提供的歌曲、模型的国内中转站与网盘之一。<br>源站没有遭到拦截，如果你受到了影响<br>，你可以访问源站或换一个网盘地址。</p>
+          </div>
+          <ul class="grid gap-xs">
+            <li class="col-12">
+              <button class="btn btn--subtle width-100% js-notice__hide-control">我知道了</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+        setTimeout(function(){
+          try {
+              document.getElementById("jsfzljnotice").style.display = "";
+          }
+          catch(err) {
+            console.log("用户可正常访问wgzeyu.vip");
+          }
+        },5000);  
+    </script>
+    <script src="https://share.wgzeyu.vip/assets/codyhouse/js/sb-js-fz.js?r=<!--WGRand-->" async></script>
+
     <div class="notice js-notice" id="oldbrowser">
       <div class="container">
         <div class="notice__banner max-width-xxxxs bg padding-sm radius-md shadow-md">
